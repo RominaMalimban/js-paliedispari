@@ -15,7 +15,7 @@ button.addEventListener("click",
     function(){
         
         let risultato = parPalindroma(parola.value);
-        document.getElementById("risultato").innerHTML = `La parola da te inserita ${risultato}`;
+        document.getElementById("risultato").innerHTML = `La parola "${parola.value}" da te inserita ${risultato}.`;
 
         parola.value = "";
        
