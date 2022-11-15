@@ -26,7 +26,6 @@ function creaNumCpu(){
     return numCpu;
 }
 
-
 // sommo il mio numero e quello del pc:
 let somma = mioNum + numCpuRandom;
 console.log("La somma dei due numeri è:", somma);
@@ -42,7 +41,6 @@ function pariODispari(){
         return "dispari";
     }
 }
-
 
 // dichiaro chi ha vinto:
 if( miaScelta === risultato ){
