@@ -23,11 +23,6 @@ botton1.addEventListener("click",
     }
 );
 
-
-// while((miaScelta !== "pari") && (miaScelta !== "dispari")){
-//     alert("Devi inserire pari o dispari");
-// }
-
 // output numero CPU:
 let numCpuRandom = creaNumCpu();
 document.querySelector("#numCpu").innerHTML = `Il numero generato dal pc è ${numCpuRandom}`;
