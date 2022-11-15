@@ -6,6 +6,7 @@
 let parola = prompt("Inserisci una parola");
 console.log("La parola inserita è", parola);
 
+// output:
 let risultato = parPalindroma(parola);
 console.log(risultato);
 
@@ -35,4 +36,3 @@ function parPalindroma(word){
 
 
 
-// output
