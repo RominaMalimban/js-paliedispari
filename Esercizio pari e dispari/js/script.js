@@ -6,3 +6,29 @@
 // Dichiariamo chi ha vinto.
 
 
+// scelgo il mio numero e lo salvo in una variabile:
+let mioNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+console.log("Il mio numero è", mioNum);
+
+let numCpuRandom = creaNumCpu();
+console.log("Il numero del cpu è", numCpuRandom)
+
+// creo la funzione per generare un numero random per il pc:
+function creaNumCpu(){
+    let numCpu = Math.floor(Math.random() * 5) + 1;
+
+    return numCpu;
+}
+
+
+// sommo il mio numero e quello del pc:
+
+
+
+// creo la funzione per stabilire se la somma e pari o dispari:
+
+
+
+// dichiaro chi ha vinto:
+
+
