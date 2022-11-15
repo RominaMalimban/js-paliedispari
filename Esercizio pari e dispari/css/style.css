@@ -4,6 +4,6 @@ span, label, input{
     margin-bottom: 5px;
 }
 
-.risultati{
+#risultati{
     display: none;
 }
