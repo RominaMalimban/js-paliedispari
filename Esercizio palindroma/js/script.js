@@ -3,12 +3,20 @@
 
 
 // chiedo all'utente di inserire una parola:
-let parola = prompt("Inserisci una parola");
+let parola = document.getElementById("parola").value;
 console.log("La parola inserita è", parola);
 
-// output:
-let risultato = parPalindroma(parola);
-console.log(risultato);
+// output su pagina:
+
+// creo bottone per il click:
+let button = document.querySelector("button");
+
+button.addEventListener("click",
+    function(){
+        let risultato = parPalindroma(parola);
+        document.getElementById("risultato").innerHTML = `La parola da te inserita ${risultato}`;
+    }
+);
 
 
 // creo la funzione per capire se è palindroma:
