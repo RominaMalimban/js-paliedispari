@@ -7,17 +7,30 @@
 
 
 // scelgo il mio numero e lo salvo in una variabile:
-let mioNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+let mioNum = parseInt(document.querySelector("input").value);
 console.log("Il mio numero è", mioNum);
 
-let miaScelta;
-while((miaScelta !== "pari") && (miaScelta !== "dispari")){
-    miaScelta = prompt("Scegli pari o dispari");
-}
-console.log("La mia scelta è:", miaScelta);
+// scelgo pari o dispari e lo salvo in una variabile:
+let miaScelta = document.querySelector("#scelta").value;
 
+// creo bottone per click su scelta del numero/ pari e dispari e la funzione:
+let botton1 = document.querySelector("button");
+botton1.addEventListener("click",
+    function(){
+        document.querySelector("#testo-num").innerHTML = `Hai scelto il numero ${mioNum}`;
+        document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${miaScelta}`;
+        document.getElementById("risultati").style.display = "block";
+    }
+);
+
+
+// while((miaScelta !== "pari") && (miaScelta !== "dispari")){
+//     alert("Devi inserire pari o dispari");
+// }
+
+// output numero CPU:
 let numCpuRandom = creaNumCpu();
-console.log("Il numero del cpu è", numCpuRandom);
+document.querySelector("#numCpu").innerHTML = `Il numero generato dal pc è ${numCpuRandom}`;
 
 // creo la funzione per generare un numero random per il pc:
 function creaNumCpu(){
@@ -26,12 +39,12 @@ function creaNumCpu(){
     return numCpu;
 }
 
-// sommo il mio numero e quello del pc:
+// output somma mio numero e quello del pc:
 let somma = mioNum + numCpuRandom;
-console.log("La somma dei due numeri è:", somma);
+document.querySelector("#somma").innerHTML = `La somma tra il tuo numero e il numero del pc è ${somma}`
 
 let risultato = pariODispari();
-console.log("Il risultato è:", risultato);
+document.querySelector("#risultato-somma").innerHTML = `${somma} è ${risultato}`
 
 // creo la funzione per stabilire se la somma è pari o dispari:
 function pariODispari(){
@@ -44,8 +57,8 @@ function pariODispari(){
 
 // dichiaro chi ha vinto:
 if( miaScelta === risultato ){
-    console.log("HAI VINTOOO");
+    document.querySelector("#risultato-finale").innerHTML = `Complimenti, hai vinto!`
 }else{
-    console.log("Mi dispiace ha vinto il pc")
+    document.querySelector("#risultato-finale").innerHTML = `Mi dispiace, hai perso!`
 }
 

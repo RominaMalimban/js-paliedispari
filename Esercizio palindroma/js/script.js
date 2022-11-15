@@ -3,7 +3,7 @@
 
 
 // chiedo all'utente di inserire una parola:
-let parola = document.getElementById("parola").value;
+let parola = document.getElementById("parola");
 console.log("La parola inserita è", parola);
 
 // output su pagina:
@@ -11,10 +11,14 @@ console.log("La parola inserita è", parola);
 // creo bottone per il click:
 let button = document.querySelector("button");
 
-button.addEventListener("click",
+button.addEventListener("click", 
     function(){
-        let risultato = parPalindroma(parola);
+        
+        let risultato = parPalindroma(parola.value);
         document.getElementById("risultato").innerHTML = `La parola da te inserita ${risultato}`;
+
+        parola.value = "";
+       
     }
 );
 
@@ -34,7 +38,7 @@ function parPalindroma(word){
     console.log("La parola finale è:", parFinale);
 
     // verifico se è palindroma oppure no:
-    if(parFinale === parola){
+    if(parFinale === parola.value){
         return "è palindroma"
     }else{
         return "non è palindroma"
