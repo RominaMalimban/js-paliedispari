@@ -25,9 +25,17 @@ function creaNumCpu(){
 let somma = mioNum + numCpuRandom;
 console.log(somma);
 
+let risultato = pariODispari();
+console.log("Il risultato è:", risultato);
 
-// creo la funzione per stabilire se la somma e pari o dispari:
-
+// creo la funzione per stabilire se la somma è pari o dispari:
+function pariODispari(){
+    if(somma % 2 === 0){
+        return "La somma dei due numeri è pari";
+    }else{
+        return "La somma dei due numeri è dispari";
+    }
+}
 
 
 // dichiaro chi ha vinto:
