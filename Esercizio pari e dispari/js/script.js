@@ -9,7 +9,11 @@
 // scelgo il mio numero e lo salvo in una variabile:
 let mioNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log("Il mio numero è", mioNum);
-let miaScelta = prompt("Scegli pari o dispari");
+
+let miaScelta;
+while((miaScelta !== "pari") && (miaScelta !== "dispari")){
+    miaScelta = prompt("Scegli pari o dispari");
+}
 console.log("La mia scelta è:", miaScelta);
 
 let numCpuRandom = creaNumCpu();
