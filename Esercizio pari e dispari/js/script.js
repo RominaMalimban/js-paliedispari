@@ -11,7 +11,7 @@ let mioNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log("Il mio numero è", mioNum);
 
 let numCpuRandom = creaNumCpu();
-console.log("Il numero del cpu è", numCpuRandom)
+console.log("Il numero del cpu è", numCpuRandom);
 
 // creo la funzione per generare un numero random per il pc:
 function creaNumCpu(){
@@ -22,7 +22,8 @@ function creaNumCpu(){
 
 
 // sommo il mio numero e quello del pc:
-
+let somma = mioNum + numCpuRandom;
+console.log(somma);
 
 
 // creo la funzione per stabilire se la somma e pari o dispari:
