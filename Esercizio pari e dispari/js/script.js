@@ -11,15 +11,16 @@ let mioNum = parseInt(document.querySelector("input").value);
 console.log("Il mio numero è", mioNum);
 
 // scelgo pari o dispari e lo salvo in una variabile:
-let miaScelta = document.querySelector("#scelta").value;
+let miaScelta = document.querySelector("#scelta");
 
 // creo bottone per click su scelta del numero/ pari e dispari e la funzione:
 let botton1 = document.querySelector("button");
 botton1.addEventListener("click",
     function(){
         document.querySelector("#testo-num").innerHTML = `Hai scelto il numero ${mioNum}`;
-        document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${miaScelta}`;
+        document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${miaScelta.value}`;
         document.getElementById("risultati").style.display = "block";
+        miaScelta.value = "";
     }
 );
 
