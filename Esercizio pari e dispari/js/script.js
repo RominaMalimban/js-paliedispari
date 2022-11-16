@@ -12,6 +12,8 @@ console.log("Il mio numero è", mioNum);
 
 // scelgo pari o dispari e lo salvo in una variabile:
 let miaScelta = document.querySelector("#scelta");
+console.log(miaScelta.value)
+let valoreScelta = miaScelta.value; 
 
 // creo bottone per click su scelta del numero/ pari e dispari e la funzione:
 let botton1 = document.querySelector("button");
@@ -21,8 +23,8 @@ botton1.addEventListener("click",
         let selezione = parseInt(mioNum.value);
 
         document.querySelector("#testo-num").innerHTML = `Hai scelto il numero ${selezione}.`;
-        document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${miaScelta.value}.`;
-        miaScelta.value = "";
+        document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${valoreScelta}.`;
+        miaScelta = "";
         mioNum.value = "";
 
         document.querySelector("#risultati").style.display = "block";
@@ -45,12 +47,11 @@ botton1.addEventListener("click",
         document.querySelector("#risultato-somma").innerHTML = `${somma} è ${risultato}.`;
 
         // dichiaro chi ha vinto:
-        if( miaScelta.value === risultato ){
+        if( valoreScelta === risultato ){
             document.querySelector("#risultato-finale").innerHTML = `Complimenti, hai vinto!`
         }else{
             document.querySelector("#risultato-finale").innerHTML = `Mi dispiace, hai perso!`
         }
-
     }
 );
 
