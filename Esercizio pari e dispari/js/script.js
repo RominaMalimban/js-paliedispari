@@ -12,8 +12,6 @@ console.log("Il mio numero è", mioNum);
 
 // scelgo pari o dispari e lo salvo in una variabile:
 let miaScelta = document.querySelector("#scelta");
-console.log(miaScelta.value)
-let valoreScelta = miaScelta.value; 
 
 // creo bottone per click su scelta del numero/ pari e dispari e la funzione:
 let botton1 = document.querySelector("button");
@@ -21,10 +19,12 @@ botton1.addEventListener("click",
     function(){
         // salvo in una variabile ciò che l'utente scrive nell'input:
         let selezione = parseInt(mioNum.value);
+        let valoreScelta = miaScelta.value; 
 
         document.querySelector("#testo-num").innerHTML = `Hai scelto il numero ${selezione}.`;
         document.querySelector("#testo-scelta").innerHTML = `Hai scelto ${valoreScelta}.`;
-        miaScelta = "";
+       
+        miaScelta.value = "";
         mioNum.value = "";
 
         document.querySelector("#risultati").style.display = "block";
